@@ -7,7 +7,7 @@ pipeline {
 npm install
 zip -r dist.zip ./
 ls'''
-        sh 'ssh ubuntu@54.213.238.102 -i /home/hasitha/project/e25m/deployment/aws/keys/dev/dev_different.pem df -h'
+        sh 'sudo ssh ubuntu@54.213.238.102 -i /home/hasitha/project/e25m/deployment/aws/keys/dev/dev_different.pem df -h'
       }
     }
   }
