@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh '''git pull origin master
 npm install
-zip dist.zip .
+zip -r dist.zip ./
 ls'''
       }
     }
