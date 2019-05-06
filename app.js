@@ -1,22 +1,22 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
-var mongoose    = require('mongoose');
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-var config = require('./config'); // get our config file
-var User   = require('./models/user'); // get our mongoose model
+const mongoose    = require('mongoose');
+const jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+const config = require('./config'); // get our config file
+const User   = require('./models/user'); // get our mongoose model
 
-var index = require('./routes/index');
-var api = require('./routes/api');
-var management = require('./routes/management');
+const index = require('./routes/index');
+const api = require('./routes/api');
+const management = require('./routes/management');
 
-var middleware = require('./lib/helpers/middleware');
+const middleware = require('./lib/helpers/middleware');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

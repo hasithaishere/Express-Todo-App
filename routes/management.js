@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
-var config = require('../config'); // get our config file
-var User   = require('../models/user'); // get our mongoose model
+const express = require('express');
+const router = express.Router();
+const jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
+const config = require('../config'); // get our config file
+const User   = require('../models/user'); // get our mongoose model
 
 // ---------------------------------------------------------
 // authentication (no middleware necessary since this isnt authenticated)
@@ -27,7 +27,7 @@ router.post('/authenticate', function(req, res) {
 
 				// if user is found and password is right
 				// create a token
-				var token = jwt.sign(user, config.secret, {
+				const token = jwt.sign(user.toJSON(), config.secret, {
 					expiresIn: 86400 // expires in 24 hours
 				});
 
