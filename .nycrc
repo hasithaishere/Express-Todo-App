@@ -1,0 +1,14 @@
+{
+    "nyc" : {
+        "include": [
+            "./**/*.js"
+        ],
+        "exclude": [
+            "./node_modules/**",
+            "./.history/**",
+            "./.nyc_output/**",
+            "./coverage/**",
+            "./tests/**"
+        ]
+    }
+}
