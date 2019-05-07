@@ -17,7 +17,6 @@ describe('authenticate Controller Function', () => {
         managementController.__set__('User', { findOne: async () => null });
 
         managementController.authenticate(req, res).then(() => {
-            /* eslint-disable no-unused-expressions */
             expect(finalResponse.success).to.be.false;
             expect(finalResponse.message).to.equal('Authentication failed. User not found.');
             done();
