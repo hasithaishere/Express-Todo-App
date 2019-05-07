@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "nyc --reporter=html --all mocha './{,!(node_modules)/**}/*.spec.js'",
-    "integration": "mocha ./tests/integration/**/*.test.js",
-    "pr": "node ./node_modules/eslint/bin/eslint.js --config ./eslintrc.js . --fix"
+    "clean": "rm -rf coverage integration_test_report",
+    "test": "npm run clean && nyc --reporter=html --all mocha './{,!(node_modules)/**}/*.spec.js'",
+    "integration": "npm run clean && mocha ./tests/integration/**/*.test.js --reporter mochawesome --reporter-options reportDir=integration_test_report,reportFilename=report.html",
+    "pr": "npm run clean && node ./node_modules/eslint/bin/eslint.js --config ./eslintrc.js . --fix"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
@@ -29,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "mocha": "^6.1.4",
+    "mochawesome": "^3.1.2",
     "mockery": "^2.1.0",
     "nyc": "^14.1.0",
     "request": "^2.88.0",
