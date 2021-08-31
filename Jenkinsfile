@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'npm intall && npm run pr'
+        sh 'npm install && npm run pr && npm run test'
       }
     }
   }

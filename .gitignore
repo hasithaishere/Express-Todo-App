@@ -3,3 +3,4 @@ npm-debug.log
 .history/
 coverage/
 .nyc_output
+integration_test_report/
