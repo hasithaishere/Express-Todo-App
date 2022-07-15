@@ -4,3 +4,5 @@ npm-debug.log
 coverage/
 .nyc_output
 integration_test_report/
+yarn.lock
+package-lock.json
