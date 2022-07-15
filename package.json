@@ -7,7 +7,7 @@
     "clean": "rm -rf coverage integration_test_report",
     "test": "npm run clean && nyc --reporter=html --all mocha './{,!(node_modules)/**}/*.spec.js'",
     "integration": "npm run clean && mocha ./tests/integration/**/*.test.js --reporter mochawesome --reporter-options reportDir=integration_test_report,reportFilename=report.html",
-    "pr": "npm run clean && node ./node_modules/eslint/bin/eslint.js --config ./eslintrc.js . --fix"
+    "pr": "npm run clean && node ./node_modules/eslint/bin/eslint.js --config ./.eslintrc.js . --fix"
   },
   "dependencies": {
     "body-parser": "~1.20.0",
@@ -23,16 +23,17 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
+    "eslint": "^8.19.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "mocha": "^10.0.0",
     "mochawesome": "^3.1.2",
     "mockery": "^2.1.0",
     "nyc": "^14.1.0",
+    "prettier": "^2.7.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "rewire": "^4.0.1",
