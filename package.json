@@ -40,6 +40,6 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "rewire": "^6.0.0",
-    "sinon": "^14.0.0"
+    "sinon": "^15.0.0"
   }
 }
